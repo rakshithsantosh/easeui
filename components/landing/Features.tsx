@@ -20,7 +20,12 @@ export default function Features() {
   };
 
   return (
-    <div className="w-full max-w-none flex flex-col justify-start items-center z-10 mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: -40 }}
+      animate={{ opacity: 1, y: -60 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="w-full max-w-none flex flex-col justify-start items-center z-10 mx-auto"
+    >
       <div className="grid grid-cols-3 md:flex md:flex-wrap items-center justify-start gap-6 md:gap-8 w-[95%] mx-auto py-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -177,6 +182,6 @@ export default function Features() {
           </motion.span>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

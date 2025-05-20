@@ -8,17 +8,18 @@ import { BrowseComponentsButton } from "../ui/browser-buttons";
 import { BrowseBlocksButton } from "../ui/browse-blocks";
 import Features from "./Features";
 import AIInput_01 from "../easeui/ai-input/ai-input-01";
+import Card02 from "../easeui/card/card-02";
 
 export function HeroSection() {
   return (
     <div className="mx-auto w-full max-w-7xl min-h-screen flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-4 sm:px-6 md:py-16 lg:py-20">
-      <div className="w-full lg:w=[455] flex-col items-start text-left space-y-8">
+      <div className="w-full lg:w-[45%] flex-col items-start text-left space-y-36">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-light leading-[1.1] text-zinc-900 dark:text-zinc-100">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100">
             Craft with <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-500 dark:from-rose-400 dark:via-fuchsia-400 dark:to-purple-400">
               Precision
@@ -29,7 +30,7 @@ export function HeroSection() {
               ease
             </span>
           </h1>
-          <p className="mt-6 text-base md:text-xl text-zinc-700 dark:text-zinc-300 max-w-lg">
+          <p className="mt-6 text-base md:text-xl text-zinc-700 dark:text-zinc-300 max-w-lg ">
             A curated collection of{" "}
             <span className="font-semibold">100+ premium UI components</span>{" "}
             carfted with{" "}
@@ -44,12 +45,12 @@ export function HeroSection() {
           </p>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: -60 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col justify-start w-full "
+          className="flex flex-col justify-start w-full"
         >
-          <span className="text-sm text-zinc-500 dark:text-zinc-300 pb-3 text-start flex items-center gap-2">
+          <span className="text-sm text-zinc-500 dark:text-zinc-300 pb-3 text-start flex items-center">
             <TailwindCSS className="w-4 b-4" />
             <span className="flex items-center gap-1.5">
               Now updated for TAILWIND CSS 4.0!{" "}
@@ -67,7 +68,7 @@ export function HeroSection() {
         <Features />
       </div>
       {/* Right Side |Component layout*/}
-      <div className="w-full lg:w-[55%] flex flex-col justify-between gap-6 lg:pl-8">
+      <div className="w-full lg:w-[55%] flex flex-col justify-between gap-2 lg:pl-8">
         {/* top rpw card action search bar cards */}
         <motion.div
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -80,7 +81,7 @@ export function HeroSection() {
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
               Card
             </span>
-            {/* card component */}
+            <Card02 />
           </div>
           {/* action search bar */}
           <div className="w-full max-w-[600px] bg-transparent">
