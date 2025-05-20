@@ -7,8 +7,12 @@ import TailwindCSS from "../icons/tailwind";
 import { BrowseComponentsButton } from "../ui/browser-buttons";
 import { BrowseBlocksButton } from "../ui/browse-blocks";
 import Features from "./Features";
-import AIInput_01 from "../easeui/ai-input/ai-input-01";
-import Card02 from "../easeui/card/card-02";
+import Card08 from "../easeui/card/card-08";
+import Profile01 from "../easeui/profile/profile-01";
+import { AIInputVariation4 } from "../easeui/ai-input/ai-input-04";
+import Btn02 from "../easeui/button/btn-02";
+import Btn08 from "../easeui/button/btn-08";
+import Input09 from "../easeui/input/input-09";
 
 export function HeroSection() {
   return (
@@ -81,7 +85,7 @@ export function HeroSection() {
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
               Card
             </span>
-            <Card02 />
+            <Card08 />
           </div>
           {/* action search bar */}
           <div className="w-full max-w-[600px] bg-transparent">
@@ -89,6 +93,7 @@ export function HeroSection() {
               Component
             </span>
             {/* action search bar */}
+            <Profile01 />
           </div>
         </motion.div>
         <motion.div
@@ -101,7 +106,7 @@ export function HeroSection() {
             Ai Chat
           </span>
           <div className="w-full h-48 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
-            <AIInput_01 />
+            <AIInputVariation4 />
           </div>
         </motion.div>
         <motion.div
@@ -114,17 +119,27 @@ export function HeroSection() {
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
               Buttons
             </span>
+
+            <div className="w-full h-48 rounded-xl border flex-col gap-3 border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
+              <Link href={"/docs/components/button"}>
+                {/*buttons*/}
+                <Btn02 />
+              </Link>
+              <Link href={"/docs/components/button"}>
+                {/*buttons*/}
+                <Btn08 />
+              </Link>
+            </div>
           </div>
 
-          <div className="w-full h-48 rounded-xl border flex-col gap-3 border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
-            <Link href={"/docs/components/button"}>{/*buttons*/}</Link>
-            <Link href={"/docs/components/button"}>{/*buttons*/}</Link>
-          </div>
           <div className="w-full ">
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
               Input
             </span>
-            <Link href={"/docs/components/input"}>{/*input*/}</Link>
+            <Link href={"/docs/components/input"}>
+              {/*input*/}
+              <Input09 />
+            </Link>
           </div>
         </motion.div>
       </div>
