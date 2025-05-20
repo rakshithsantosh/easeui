@@ -7,6 +7,7 @@ import TailwindCSS from "../icons/tailwind";
 import { BrowseComponentsButton } from "../ui/browser-buttons";
 import { BrowseBlocksButton } from "../ui/browse-blocks";
 import Features from "./Features";
+import AIInput_01 from "../easeui/ai-input/ai-input-01";
 
 export function HeroSection() {
   return (
@@ -64,6 +65,67 @@ export function HeroSection() {
           </div>
         </motion.div>
         <Features />
+      </div>
+      {/* Right Side |Component layout*/}
+      <div className="w-full lg:w-[55%] flex flex-col justify-between gap-6 lg:pl-8">
+        {/* top rpw card action search bar cards */}
+        <motion.div
+          initial={{ opacity: 0, y: -20, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center"
+        >
+          {/* card component */}
+          <div className="w-full flex flex-col items-center justify-center">
+            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
+              Card
+            </span>
+            {/* card component */}
+          </div>
+          {/* action search bar */}
+          <div className="w-full max-w-[600px] bg-transparent">
+            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
+              Component
+            </span>
+            {/* action search bar */}
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -20, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="w-full"
+        >
+          <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
+            Ai Chat
+          </span>
+          <div className="w-full h-48 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
+            <AIInput_01 />
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -20, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="w-full grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
+          <div className="w-full">
+            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
+              Buttons
+            </span>
+          </div>
+
+          <div className="w-full h-48 rounded-xl border flex-col gap-3 border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
+            <Link href={"/docs/components/button"}>{/*buttons*/}</Link>
+            <Link href={"/docs/components/button"}>{/*buttons*/}</Link>
+          </div>
+          <div className="w-full ">
+            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2 ">
+              Input
+            </span>
+            <Link href={"/docs/components/input"}>{/*input*/}</Link>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
